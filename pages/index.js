@@ -1,7 +1,17 @@
-import styles from '../src/css/app.module.css';
+import Link from "next/link";
+import styles from "../src/css/index.module.css";
 
 function HomePage() {
-  return <div className={'moreGeneralClass '+ styles.moreSpecificClass}>Welcome to Next.js!</div>
+  return (
+    <div>
+      <Link href="/other-page">
+        <a>Other Page</a>
+      </Link>
+      <div className={"moreGeneralClass " + styles.moreSpecificClass}>
+        Welcome to Next.js!
+      </div>
+    </div>
+  );
 }
 
-export default HomePage
+export default HomePage;
